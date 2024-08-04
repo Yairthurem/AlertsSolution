@@ -8,8 +8,10 @@ namespace FlightAlerts.Modules
         public string UserName { get; set; } = "";
         [FlightAbbrevationValid(ErrorMessage = "FlightAbbreviation must contain exactly 6 latin characters as a combination of the origin and destination F.E. PARMAD.")]
         public string FlightAbbreviation { get; set; } = "";
+        [FutureDate]
         public DateTime DepartureDate { get; set; }        
         public bool IsReturn { get; set; }
+        [FutureDate][ReturnDate]
         public DateTime? ReturnDate { get; set; }
         [Precision(18, 2)][GreaterThan(0)]
         public decimal RequestedPrice { get; set; }
