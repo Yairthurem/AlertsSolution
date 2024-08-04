@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using FlightAlerts.Modules;
-public class ReturnDate : ValidationAttribute
+public class LaterReturnDate : ValidationAttribute
 {
     protected override ValidationResult IsValid(object value, ValidationContext validationContext)
     {

@@ -11,7 +11,7 @@ namespace FlightAlerts.Modules
         [FutureDate]
         public DateTime DepartureDate { get; set; }        
         public bool IsReturn { get; set; }
-        [FutureDate][ReturnDate]
+        [FutureDate][LaterReturnDate]
         public DateTime? ReturnDate { get; set; }
         [Precision(18, 2)][GreaterThan(0)]
         public decimal RequestedPrice { get; set; }
