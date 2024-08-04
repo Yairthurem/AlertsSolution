@@ -14,6 +14,7 @@ class Program
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
 
+        // Add EF DbContext as InMemoryDB service
         builder.Services.AddDbContext<ApplicationDbContext>(options =>
             options.UseInMemoryDatabase("AlertsDB"));
 
